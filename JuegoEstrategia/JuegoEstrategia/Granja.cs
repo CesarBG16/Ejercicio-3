@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace JuegoEstrategia
 {
-    public class Casa : Estructura
+    public class Granja : Estructura
     {
-        public Casa() : base("Casa", 40, 50, 2)
+        public int ProduccionEnergia { get; private set; }
+
+        public Granja() : base("Granja", 30, 50, 5)
         {
+            ProduccionEnergia = 5;
         }
 
         public override string ObtenerDescripcion()
         {
-            return $"Casa: Permite crear nuevas unidades" +
+            return $"Granja: Produce {ProduccionEnergia} de energia por turno" +
                    $"Cuesta {CostoEnergia} de energia y tarda {TurnosConstruccion} turnos en construirse";
         }
     }

@@ -10,6 +10,15 @@ namespace JuegoEstrategia
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Bienvenido al Juego de Estrategia");
+            Console.Write("Ingresa tu nombre: ");
+            string nombreJugador = Console.ReadLine();
+
+            Juego juego = new Juego(nombreJugador);
+            juego.IniciarJuego();
+
+            Console.WriteLine("Gracias por jugar, presiona cualquier tecla para salir...");
+            Console.ReadKey();
         }
     }
 }
